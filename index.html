@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Railway NTPC Typing Test Practice Tool - Official RRB Mode</title>
+<meta name="description" content="Prepare for the RRB NTPC Clerk and Typist skill test with TypingWire's official railway simulator. Experience the strict locked-backspace evaluation engine.">
+<meta name="keywords" content="Railway NTPC typing test, RRB clerk typing software, typingwire, locked backspace typing test, railway typing test practice english">
+
+<meta name="google-site-verification" content="tW8cRSIvyoCElL6zoJE9PeLCSVrz981avVInEs7axNo" />
+
+<link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dvnjhbz54/image/upload/v1771531264/favicon_nuw3of.ico">
+<link rel="apple-touch-icon" href="https://res.cloudinary.com/dvnjhbz54/image/upload/v1779734567/logo_huw4pu.jpg">
+<link rel="canonical" href="https://typingwire-oss.github.io/railway-ntpc-typing-test-simulator/">
+
+<meta property="og:title" content="Railway NTPC Typing Test Practice Tool - Official RRB Mode">
+<meta property="og:description" content="Validate your structural typing speed without backspace under official railway recruitment evaluation parameters.">
+<meta property="og:image" content="https://res.cloudinary.com/dvnjhbz54/image/upload/v1779734567/logo_huw4pu.jpg">
+<meta property="og:url" content="https://typingwire-oss.github.io/railway-ntpc-typing-test-simulator/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#b71c1c">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TypingWire Railway NTPC Typing Console",
+  "url": "https://typingwire-oss.github.io/railway-ntpc-typing-test-simulator/",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "All",
+  "description": "High-fidelity railway typographical simulator designed to completely enforce locked editing features and calculate word metrics matching the 5% error relaxation rule.",
+  "browserRequirements": "Requires JavaScript and HTML5 Standard Compliance.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "TypingWire",
+    "url": "https://typingwire.in",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://res.cloudinary.com/dvnjhbz54/image/upload/v1779734567/logo_huw4pu.jpg"
+    }
+  }
+}
+</script>
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#edf2f7;color:#222}
+.top-strip{height:18px;background:#b71c1c;border-bottom:3px solid #ffb300}
+.header{height:82px;background:#f8f9fa;border-bottom:1px solid #cfd8dc;display:flex;align-items:center;justify-content:space-between;padding:0 22px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:50px;height:50px;border-radius:7px}
+.brand-title{font-size:28px;font-weight:800;color:#b71c1c}
+.brand-title span{color:#ffb300}
+.brand-sub{font-size:11px;font-weight:bold;color:#607d8b}
+.user-box{display:flex;align-items:center;gap:10px;font-size:13px}
+.avatar{width:48px;height:48px;border-radius:50%;background:#ffebee;border:1px solid #ffcdd2;display:flex;align-items:center;justify-content:center;font-size:24px}
+.info-row{height:40px;background:white;border-bottom:1px solid #cfd8dc;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:14px}
+.info-row b{color:#b71c1c}
+.timer{font-size:18px;color:#d32f2f;font-weight:bold}
+.official-cta{background:#ffebee;border-bottom:1px solid #ffb300;color:#b71c1c;padding:10px 22px;font-size:15px;text-align:center}
+.official-cta a{color:#ffb300;font-weight:bold;text-decoration:underline}
+.page{padding:12px}
+.panel{border:1px solid #b0bec5;background:white}
+.panel-title{background:#c62828;color:white;font-size:18px;font-weight:bold;padding:8px 12px;border-bottom:1px solid #b71c1c}
+.exam-area{display:grid;grid-template-columns:1fr 285px;gap:14px;padding:12px}
+.passage-box{height:160px;border:1px solid #b0bec5;background:white;overflow:auto;padding:11px 13px;font-size:17px;line-height:1.6;color:#212121;user-select:none;-webkit-user-select:none;}
+.typing-box{width:100%;height:160px;margin-top:8px;border:1px solid #78909c;background:white;resize:none;padding:11px 13px;font-size:17px;line-height:1.6;outline:none}
+.typing-box:focus{border:2px solid #c62828}
+.side-note{border:1px solid #cfd8dc;background:#fdfdfd;padding:12px;font-size:13px;line-height:1.55;height:178px;overflow:auto}
+.side-note b{color:#c62828}
+.submit-wrap{text-align:right;margin-top:14px}
+.btn{background:#c62828;color:white;border:none;padding:9px 20px;border-radius:2px;font-weight:bold;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{background:#b71c1c}
+.cta-box{margin-top:14px;border:1px solid #ffcdd2;background:#fffde7;padding:13px;font-size:13px;line-height:1.5}
+.cta-box h3{margin:0 0 7px;color:#b71c1c;font-size:16px}
+.cta-box p{margin:0 0 10px}
+.cta-box a{display:inline-block;background:#c62828;color:white;padding:8px 13px;text-decoration:none;border-radius:3px;font-weight:bold}
+.seo-content{background:#fff;margin-top:14px;border:1px solid #cfd8dc;padding:18px;line-height:1.65;font-size:15px}
+.seo-content h1{font-size:25px;color:#b71c1c;margin:0 0 10px}
+.seo-content h2{font-size:20px;color:#c62828;margin-top:18px}
+.seo-content table{width:100%;border-collapse:collapse;margin:12px 0}
+.seo-content td,.seo-content th{border:1px solid #cfd8dc;padding:9px;text-align:left}
+.seo-content th{background:#ffebee}
+.footer-line{height:20px;background:#37474f;color:white;text-align:center;font-size:11px;line-height:20px;margin-top:6px}
+select{padding:5px 10px;border:1px solid #b0bec5;background:white}
+.result-screen{display:none;min-height:100vh;background:#edf2f7;padding:30px}
+.result-card{max-width:780px;margin:30px auto;background:white;border:1px solid #b0bec5;box-shadow:0 4px 18px rgba(0,0,0,.1)}
+.result-head{background:#b71c1c;color:white;text-align:center;padding:22px}
+.result-head img{width:76px;border-radius:10px;margin-bottom:8px}
+.result-body{padding:25px}
+.result-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.result-item{border:1px solid #cfd8dc;background:#f9fbe7;padding:16px;text-align:center;font-size:16px}
+.result-item b{display:block;color:#b71c1c;font-size:30px;margin-top:5px}
+.visit{display:block;width:max-content;margin:24px auto 0;background:#b71c1c;color:white;text-decoration:none;padding:12px 25px;border-radius:3px;font-weight:bold}
+@media(max-width:760px){
+.header{height:auto;padding:12px;flex-direction:column;gap:8px}
+.exam-area{grid-template-columns:1fr}
+.side-note{height:auto}
+.info-row{height:auto;padding:10px;flex-direction:column;gap:8px}
+.result-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<div id="testScreen">
+  <div class="top-strip"></div>
+
+  <div class="header">
+    <div class="brand">
+      <img src="https://res.cloudinary.com/dvnjhbz54/image/upload/v1779734567/logo_huw4pu.jpg" alt="TypingWire Logo">
+      <div>
+        <div class="brand-title">Typing<span>Wire</span></div>
+        <div class="brand-sub">RRB PACING CONSOLE · ZERO ERROR ARCHITECTURE</div>
+      </div>
+    </div>
+
+    <div class="user-box">
+      <div>
+        <div>Operational State: <b>RRB NTPC Candidate</b></div>
+        <div>Active Countdown: <span class="timer" id="timer">10:00</span></div>
+      </div>
+      <div class="avatar">👤</div>
+    </div>
+  </div>
+
+  <div class="official-cta">
+    <b>Strict Locked-Backspace Server:</b> 
+    Test your real accuracy margins and evaluate performance indicators at the primary 
+    <a href="https://typingwire.in" target="_blank">TypingWire.in Central Hub</a>
+  </div>
+
+  <div class="info-row">
+    <div>
+      Allocation Settings:
+      <select id="duration" onchange="changeDuration()">
+        <option value="120">2 Minutes</option>
+        <option value="300">5 Minutes</option>
+        <option value="600" selected>10 Minutes (Official)</option>
+      </select>
+    </div>
+    <div><b id="topTitle">RRB NTPC Automated Skill Test Console</b></div>
+  </div>
+
+  <div class="page">
+    <div class="panel">
+      <div class="panel-title">Active Board Assessment Terminal (Backspace Fully Disabled)</div>
+
+      <div class="exam-area">
+        <div>
+          <div class="passage-box" id="passage"></div>
+          <textarea id="typingBox" class="typing-box" placeholder="Awaiting mechanical data input. Keystroke registration triggers system clock instantly..." oninput="startTest()"></textarea>
+        </div>
+
+        <div>
+          <div class="side-note">
+            CRITICAL ENFORCEMENT: **Backspace and Delete commands are structurally locked**. Faulty key alignments cannot be recovered.
+            <br><br>
+            Evaluation includes the official **5% mistake relaxation parameters** applied to total keystroke volume.
+            <br><br>
+            Warning: Viewport modifications or page reloads will break the running calculation arrays.
+          </div>
+
+          <div class="submit-wrap">
+            <button class="btn" onclick="submitTest()">Process Evaluation Profile</button>
+          </div>
+
+          <div class="cta-box">
+            <h3>Railway Skill Board Mock Schemes</h3>
+            <p>Access high-volume error relaxation charts and extensive cross-region performance breakdowns on our core cloud systems.</p>
+            <a href="https://typingwire.in" target="_blank">Launch Master Dashboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="seo-content">
+      <h1>Railway NTPC Typing Test Practice Tool - Locked Backspace UI</h1>
+
+      <p>
+        Welcome to the premium interactive structural mockup console configured specifically for the Railway Recruitment Board (RRB) NTPC non-technical typing skill exams. This web application runs completely via client-side operations to replicate severe hardware locks without requiring bulky tracking assets or invoking search engine 'thin content' index blocks.
+      </p>
+
+      <p>
+        The Railway NTPC typographical test represents one of the most challenging selection barriers due to its strict structural rules: **Backspace functionality is fully disabled**. Once a key is pressed, it is logged into the system memory permanently. Our client script listens directly for input adjustments, grading performance exactly like actual railway software platforms.
+      </p>
+
+      <h2>System Matrix Specifications</h2>
+      <table>
+        <tr><th>Institutional Authority</th><td>Railway Recruitment Board (RRB NTPC Recruitment)</td></tr>
+        <tr><th>Interface Restriction Mode</th><td>Severe Lockout Mode (Backspace / Delete Structurally Blocked)</td></tr>
+        <tr><th>Configured Intervals</th><td>2 Minutes, 5 Minutes, and Official 10-Minute Testing Targets</td></tr>
+        <tr><th>Layout Configuration</th><td>Split-Window Fixed Text Interface (TCS iON Railway Pattern)</td></tr>
+        <tr><th>Deduction Engine Scheme</th><td>Official 5% Free Error Allowance Routine (Remaining Mistakes Penalized)</td></tr>
+        <tr><th>Metric Outputs</th><td>Gross WPM, Net Speeds, Total Locked Discrepancies, Keystrokes Volume</td></tr>
+      </table>
+
+      <h2>Operating Instructions</h2>
+      <ol>
+        <li>Assign the training interval from the selection drop-down; text paragraph sizes scale dynamically.</li>
+        <li>Focus your physical keyboard cursor inside the main input field box to connect the security script listeners.</li>
+        <li>Commence typing; the algorithm logs system runtimes immediately upon sensing the initial input token.</li>
+        <li>Maintain intense precision as backspace corrections are strictly locked across the browser engine.</li>
+        <li>Click compilation to finalize data strings and launch the automated performance diagnostics screen.</li>
+      </ol>
+
+      <h2>Advanced Software System Capabilities</h2>
+      <ul>
+        <li>**Hardware Listener Intercepts:** Overrides default browser inputs to capture and discard attempts to delete text.</li>
+        <li>**Authentic Formula Engine:** Employs the standard formula ($\text{Net Speed} = \text{Gross Words} - \text{Mistake Penalties}$) adjusted for the 5% error buffer limit.</li>
+        <li>**Fluid Viewport Engineering:** The responsive container preserves perfect alignment across multiple layout sizes.</li>
+      </ul>
+
+      <h2>Strategic Advice for Railway Typists</h2>
+      <p>
+        Because RRB NTPC evaluations do not permit errors to be corrected, attempting to type at hyper-speeds early on can easily lead to compounding line errors. Candidates are strongly advised to keep a steady, metered rhythm, ensuring high visual accuracy before attempting to raise their net speed.
+      </p>
+      <p>
+        For expanded national mock systems featuring live community rankings, predictive analytics, and alternative layout maps, navigate to the master site at
+        <a href="https://typingwire.in" target="_blank">TypingWire.in Solutions</a>.
+      </p>
+    </section>
+
+    <div class="footer-line">© <span id="yearBox"></span> TypingWire.in | Intelligent System Simulators</div>
+  </div>
+</div>
+
+<div class="result-screen" id="resultScreen">
+  <div class="result-card">
+    <div class="result-head">
+      <img src="https://res.cloudinary.com/dvnjhbz54/image/upload/v1779734567/logo_huw4pu.jpg" alt="TypingWire Logo">
+      <h1>Railway Skill Board Diagnostics</h1>
+      <p>TypingWire Performance Compilation</p>
+    </div>
+
+    <div class="result-body">
+      <div class="result-grid">
+        <div class="result-item">Gross Speed <b id="grossWpm">0 WPM</b></div>
+        <div class="result-item">Net Speed <b id="netWpm">0 WPM</b></div>
+        <div class="result-item">Accuracy Metrics <b id="accuracy">0%</b></div>
+        <div class="result-item">Unrecoverable Errors <b id="errors">0</b></div>
+        <div class="result-item">Total Keystrokes <b id="keystrokes">0</b></div>
+        <div class="result-item">Runtime Duration <b id="timeUsed">0 Min</b></div>
+      </div>
+
+      <a class="visit" href="https://typingwire.in" target="_blank">Return to Central Dashboard</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const currentYear = new Date().getFullYear();
+document.getElementById("yearBox").innerText = currentYear;
+document.title = "Railway NTPC Typing Test Practice Tool " + currentYear + " - Official RRB Mode";
+
+const paragraph2 = `Railway recruitment evaluations test absolute mechanical control. Typing thirty words per minute without editing privileges establishes deep foundational muscle memory.`;
+
+const paragraph5 = `The specialized Railway NTPC static evaluation matrix delivers necessary testing routines for candidates aiming to clear central board clerical designations. Enforcing strict lockout parameters across every input phase ensures typists learn to avoid erratic key displacement faults.`;
+
+const paragraph10 = `Clearing the standard qualification parameters enforced during the RRB NTPC typing skill evaluation requires high structural precision, exceptional rhythmic discipline, and continuous concentration. Candidates must commit to daily training inside an unyielding layout environment to adapt to running countdown scripts without the psychological safety net of editing keys. Every character must match the target text precisely to stay within the official five percent mistake relaxation allowance. Attempting to force quick corrections is blocked by native script configurations. By consistently monitoring your metrics such as Gross WPM, Net Speed, and total unrecoverable string faults, you can reliably track your skill growth before the official board assessment session.`;
+
+const passageBox = document.getElementById("passage");
+const typingBox = document.getElementById("typingBox");
+const timerBox = document.getElementById("timer");
+
+let totalTime = 600;
+let timeLeft = 600;
+let started = false;
+let interval = null;
+let currentPassage = paragraph10;
+
+// Hard lockout mechanism to intercept backspace actions
+typingBox.addEventListener('keydown', function(e) {
+  if (e.key === 'Backspace' || e.key === 'Delete') {
+    e.preventDefault();
+    return false;
+  }
+});
+
+function setPassage(){
+  const val = document.getElementById("duration").value;
+  if(val == "120") currentPassage = paragraph2;
+  if(val == "300") currentPassage = paragraph5;
+  if(val == "600") currentPassage = paragraph10;
+  passageBox.innerText = currentPassage;
+}
+
+function changeDuration(){
+  if(started) return;
+  totalTime = parseInt(document.getElementById("duration").value);
+  timeLeft = totalTime;
+  setPassage();
+  updateTimer();
+}
+
+function updateTimer(){
+  const m = Math.floor(timeLeft / 60);
+  const s = timeLeft % 60;
+  timerBox.innerText = String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+}
+
+function startTest(){
+  if(started) return;
+  started = true;
+  totalTime = parseInt(document.getElementById("duration").value);
+  timeLeft = totalTime;
+
+  interval = setInterval(function(){
+    timeLeft--;
+    updateTimer();
+
+    if(timeLeft <= 0){
+      submitTest();
+    }
+  }, 1000);
+}
+
+function submitTest(){
+  clearInterval(interval);
+
+  const typed = typingBox.value;
+  const original = currentPassage;
+  let errors = 0;
+  let correct = 0;
+
+  for(let i=0; i<typed.length; i++){
+    if(typed[i] === original[i]){
+      correct++;
+    }else{
+      errors++;
+    }
+  }
+
+  const totalChars = typed.length;
+  const minutesUsed = Math.max((totalTime - timeLeft) / 60, 0.1);
+  const totalWords = totalChars / 5;
+  
+  // Official RRB Rule: 5% of total words errors are ignored, remaining are penalized 10x
+  const allowedErrors = totalWords * 0.05;
+  const penaltyErrors = Math.max(0, errors - allowedErrors);
+  
+  const gross = Math.round(totalWords / minutesUsed);
+  const net = Math.max(0, Math.round((totalWords - (penaltyErrors * 10)) / minutesUsed));
+  const acc = totalChars ? Math.max(0, Math.round((correct / totalChars) * 100)) : 0;
+
+  document.getElementById("grossWpm").innerText = gross + " WPM";
+  document.getElementById("netWpm").innerText = net + " WPM";
+  document.getElementById("accuracy").innerText = acc + "%";
+  document.getElementById("errors").innerText = errors;
+  document.getElementById("keystrokes").innerText = totalChars;
+  document.getElementById("timeUsed").innerText = Math.round(minutesUsed * 10) / 10 + " Min";
+
+  document.getElementById("testScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "block";
+}
+
+setPassage();
+updateTimer();
+</script>
+
+</body>
+</html>
